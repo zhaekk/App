@@ -4,6 +4,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.LinearLayout;
@@ -43,20 +44,22 @@ public class Chatbot_repoMainActivity extends AppCompatActivity{
 
         sendButton.setOnClickListener((v)->{
             String question = messageEditText.getText().toString().trim();
-            addToChat(question, Message_repo.SENT_BY_ME);
+            addToChat(question,Message_repo.SENT_BY_ME);
+            messageEditText.setText("");
+            welcomeTextView.setVisibility(View.GONE);
         });
     }
 
-    void addToChat(String message, String sentBy){
+    void addToChat(String message, String sentBy) {
         runOnUiThread(new Runnable() {
             @Override
             public void run() {
-                messageList.add(new Message_repo(message,sentBy));
+                messageList.add(new Message_repo(message, sentBy));
                 messageAdapterRepo.notifyDataSetChanged();
                 recyclerView.smoothScrollToPosition(messageAdapterRepo.getItemCount());
             }
         });
-
     }
-
 }
+
+

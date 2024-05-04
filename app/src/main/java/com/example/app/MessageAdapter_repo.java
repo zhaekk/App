@@ -32,12 +32,12 @@ public class MessageAdapter_repo extends RecyclerView.Adapter<MessageAdapter_rep
         Message_repo message = messageList.get(position);
         if (message.getSentBy().equals(Message_repo.SENT_BY_ME)){
             holder.leftChatView.setVisibility(View.GONE);
-            holder.rightChatView.setVisibility(View.GONE);
-            holder.rightTextView.setText(message.getMessage());
+            holder.rightChatView.setVisibility(View.VISIBLE);
+            holder.rightTextView.setText(message.getMessage_repo());
         }else{
             holder.rightChatView.setVisibility(View.GONE);
-            holder.leftChatView.setVisibility(View.GONE);
-            holder.leftTextView.setText(message.getMessage());
+            holder.leftChatView.setVisibility(View.VISIBLE);
+            holder.leftTextView.setText(message.getMessage_repo());
         }
     }
 

@@ -8,11 +8,11 @@ public class Message_repo {
     String message;
     String sentBy;
 
-    public String getMessage() {
+    public String getMessage_repo() {
         return message;
     }
 
-    public void setMessage(String message) {
+    public void setMessage_repo(String message) {
         this.message = message;
     }
 
