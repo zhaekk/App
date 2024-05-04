@@ -7,4 +7,9 @@
     <color name="light_grey">#636363</color>
     <color name="Mint">#9ADBBA</color>
     <color name="blueBlack">#111f28</color>
+
+    <color name="back_color">#13253D</color>
+    <color name="bot_back_color">#203757</color>
+    <color name="user_back_color">#6965FF</color>
+    <color name="fab_color">#6B6AFF</color>
 </resources>

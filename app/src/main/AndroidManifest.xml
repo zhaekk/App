@@ -45,7 +45,7 @@
         <activity android:name=".TutorialMainActivity" />
 
         <!-- Chatbot Activity -->
-        <activity android:name=".ChatbotMainActivity" />
+        <activity android:name=".Chatbot_repoMainActivity" />
 
     </application>
 
