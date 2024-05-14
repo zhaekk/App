@@ -25,7 +25,7 @@ public class MessageAdapter_repo extends RecyclerView.Adapter<MessageAdapter_rep
         View chatView = LayoutInflater.from(parent.getContext()).inflate(R.layout.chat_item_repo, null);
         MyViewHolder myViewHolder = new MyViewHolder(chatView);
         return myViewHolder;
-     }
+    }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
@@ -47,8 +47,8 @@ public class MessageAdapter_repo extends RecyclerView.Adapter<MessageAdapter_rep
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder{
-    LinearLayout leftChatView,rightChatView;
-    TextView leftTextView,rightTextView;
+        LinearLayout leftChatView,rightChatView;
+        TextView leftTextView,rightTextView;
 
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);

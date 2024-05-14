@@ -1,7 +1,7 @@
 package com.example.app;
 
 public class Message_repo {
-    
+
     public static String SENT_BY_ME = "me";
     public static String SENT_BY_BOT = "bot";
 

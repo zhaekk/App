@@ -23,7 +23,7 @@ public class Chatbot_repoMainActivity extends AppCompatActivity{
     List<Message_repo> messageList;
     MessageAdapter_repo messageAdapterRepo;
 
-    
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
