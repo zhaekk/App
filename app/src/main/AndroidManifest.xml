@@ -14,7 +14,7 @@
         android:theme="@style/AppTheme"
         tools:targetApi="31">
         <activity
-            android:name=".Chatbot_repo"
+            android:name=".Chatbot_repoMainActivity"
             android:exported="false" /> <!-- Set Dashboard activity -->
         <activity
             android:name=".Dashboard"
