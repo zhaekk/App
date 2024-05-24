@@ -57,8 +57,35 @@ public class Chatbot_repoMainActivity extends AppCompatActivity{
                 messageList.add(new Message_repo(message, sentBy));
                 messageAdapterRepo.notifyDataSetChanged();
                 recyclerView.smoothScrollToPosition(messageAdapterRepo.getItemCount());
+                botreply(message, Message_repo.SENT_BY_BOT);
             }
         });
+    }
+
+    void botreply(String message, String sentBy) {
+        String bot_response = " ";
+
+        if (message.contains("drought resistant corn")) {
+            bot_response = "Researchers are exploring several strategies for drought resistance in corn. " +
+                    "Some varieties have deeper root systems to access more water from the soil. " +
+                    "Others have genes that allow them to tolerate drier conditions by closing their stomata (leaf pores) to reduce water loss." +
+                    " Additionally, scientists are investigating genes that regulate stress response and osmoprotectant production, " +
+                    "molecules that help plants maintain cell function during drought.";
+            messageList.add(new Message_repo(bot_response, sentBy));
+
+            String[] stringArray = new String[]{"traditional methods", "improve corn and rice"};
+        } else if (message.contains("traditional methods")) {
+            bot_response = "Traditional breeding is a time-tested method that involves selecting plants with desirable traits, " +
+                    "like high yield or disease resistance, and crossing them to create new generations with those traits. " +
+                    "This method has been used for centuries and is still a valuable tool for crop improvement.";
+            messageList.add(new Message_repo(bot_response, sentBy));
+        } else {
+            Toast.makeText(this, "Input Something", Toast.LENGTH_SHORT).show();
+        }
+
+
+        messageAdapterRepo.notifyDataSetChanged();
+        recyclerView.smoothScrollToPosition(messageAdapterRepo.getItemCount());
     }
 }
 
