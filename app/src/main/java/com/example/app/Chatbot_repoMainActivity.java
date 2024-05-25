@@ -22,7 +22,6 @@ public class Chatbot_repoMainActivity extends AppCompatActivity{
     ImageButton sendButton;
     List<Message_repo> messageList;
     MessageAdapter_repo messageAdapterRepo;
-    private CharSequence arraywords;
 
 
     @Override
